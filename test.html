@@ -1,0 +1,1009 @@
+README MITAB2.6 for iRefIndex 15.0
+iRefIndex 15.0 Downloads
+
+Document-save-80x80.png
+
+Last edited: 2018-03-10
+
+Applies to iRefIndex release: 15.0
+
+Release date: January 22nd, 2018
+
+Download location: http://irefindex.org/download/irefindex/data/archive/release_15.0/psi_mitab/MITAB2.6/
+
+
+Authors: Ian Donaldson
+
+Database: iRefIndex (http://irefindex.org)
+
+Contact: ian@donaldsonresearch.com
+
+
+Contents
+1 Description
+2 Directory contents
+3 Changes from last version
+4 Known Issues
+4.1 Interactions involving small molecules are missing
+4.2 IMEX identifiers
+4.3 PSI-MITAB2.7
+5 Understanding the iRefIndex MITAB format
+5.1 What each line represents
+5.2 Representation of interactions
+5.2.1 Binary interaction data
+5.2.2 Complexes (a.k.a. n-ary data)
+5.2.3 Intramolecular interactions and multimers
+5.3 Keys for grouping together redundant interactors and interactions
+5.4 Provenance data
+6 License
+7 Citation
+8 Disclaimer
+9 Description of PSI-MITAB2.6 file
+9.1 Column number: 1 (uidA)
+9.2 Column number: 2 (uidB)
+9.3 Column number: 3 (altA)
+9.4 Column number: 4 (altB)
+9.5 Column number: 5 (aliasA)
+9.6 Column number: 6 (aliasB)
+9.7 Column number: 7 (Method)
+9.8 Column number: 8 (author)
+9.9 Column number: 9 (pmids)
+9.10 Column number: 10 (taxa)
+9.11 Column number: 11 (taxb)
+9.12 Column number: 12 (interactionType)
+9.13 Column number: 13 (sourcedb)
+9.14 Column number: 14 (interactionIdentifier)
+9.15 Column number: 15 (confidence)
+9.16 Column number: 16 (expansion)
+9.17 Column number: 17 (biological_role_A)
+9.18 Column number: 18 (biological_role_B)
+9.19 Column number: 19 (experimental_role_A)
+9.20 Column number: 20 (experimental_role_B)
+9.21 Column number: 21 (interactor_type_A)
+9.22 Column number: 22 (interactor_type_B)
+9.23 Column number: 23 (xrefs_A)
+9.24 Column number: 24 (xrefs_B)
+9.25 Column number: 25 (xrefs_Interaction)
+9.26 Column number: 26 (Annotations_A)
+9.27 Column number: 27 (Annotations_B)
+9.28 Column number: 28 (Annotations_Interaction)
+9.29 Column number: 29 (Host_organism_taxid)
+9.30 Column number: 30 (parameters_Interaction)
+9.31 Column number: 31 (Creation_date)
+9.32 Column number: 32 (Update_date)
+9.33 Column number: 33 (Checksum_A)
+9.34 Column number: 34 (Checksum_B)
+9.35 Column number: 35 (Checksum_Interaction)
+9.36 Column number: 36 (Negative)
+9.37 Column number: 37 (OriginalReferenceA)
+9.38 Column number: 38 (OriginalReferenceB)
+9.39 Column number: 39 (FinalReferenceA)
+9.40 Column number: 40 (FinalReferenceB)
+9.41 Column number: 41 (MappingScoreA)
+9.42 Column number: 42 (MappingScoreB)
+9.43 Column number: 43 (irogida)
+9.44 Column number: 44 (irogidb)
+9.45 Column number: 45 (irigid)
+9.46 Column number: 46 (crogida)
+9.47 Column number: 47 (crogidb)
+9.48 Column number: 48 (crigid)
+9.49 Column number: 49 (icrogida)
+9.50 Column number: 50 (icrogidb)
+9.51 Column number: 51 (icrigid)
+9.52 Column number: 52 (imex_id)
+9.53 Column number: 53 (edgetype)
+9.54 Column number: 54 (numParticipants)
+Description
+This file describes the contents of the
+
+http://irefindex.org/download/irefindex/data/archive/release_15.0/psi_mitab/MITAB2.6/
+
+directory and the format of the tab-delimited text files contained within. Each index file follows the PSI-MITAB2.6 format with additional columns for annotating edges and nodes. Assignment of source interaction records to these redundant groups is described at http://irefindex.org. The PSI-MI2.6 format plus additional columns is described below.
+
+A supplementary file lists just database:accession pairs for proteins and their mapping to irog, icrog and Entrez Gene identifiers. See http://irefindex.org/download/irefindex/data/current/Mappingfiles/
+
+and README at
+
+http://irefindex.org/wiki/index.php?title=Protein_identifier_mapping
+
+Details on the build process are available from the publication PMID 18823568.
+
+This public distribution includes data consolidated using the iRefIndex method for BIND, BIND_TRANSLATION, BioGRID, CORUM, DIP, HPRD, IntAct, IntComplex, I2D_IMEX, InnateDB, MATRIXDB, MPACT, MPPI and MPIDB. REACTOME, VIRUSHOST, UNIPROTPP, HPIDB, BHF_UCL, MBINFO, MOLCON, and QUICKGO. MINT is now included in IntAct.
+
+
+All of these resources have been integrated from freely available sources. See the sources links below for details.
+Sources	http://irefindex.org/wiki/index.php?title=Sources_iRefIndex_15.0
+Statistics	http://irefindex.org/wiki/index.php?title=Statistics_iRefIndex_15.0
+Download location	http://irefindex.org/download/irefindex/data/archive/release_15.0/psi_mitab/MITAB2.6/
+Directory contents
+readme	pointer to this file
+xxxx.mitab.ddmmyyyy.txt.zip	individual indices in PSI-MITAB2.6 format
+iRefIndex data is distributed as a set of tab-delimited text files with names of the form xxxx.mitab.mmddyyyy.txt.zip where ddmmyyyy represents the file's creation date.
+
+The complete index is available as All.mitab.ddmmyyyy.txt.zip .
+
+Taxon specific data sets are also available for:
+
+Taxon Id
+Homo sapiens	9606 (human)
+Mus musculus	10090 (mouse)
+Rattus norvegicus	10116 (brown rat)
+Caenorhabditis elegans	6239 (nematode)
+Drosophila melanogaster	7227 (fruit fly)
+Saccharomyces cerevisiae	4932 (baker's yeast)
+Saccharomyces cerevisiae S288c	559292
+Escherichia coli.	562 (E. Coli)
+Other	other
+All	all
+Taxon specific subsets of the data are named xxxx.mitab.ddmmyyyy.txt.zip where xxxx is the taxonomy identifier of at least one of the interactors according to either the source interaction database or the sequence database record. Each zip compressed file contains a single text file with the corresponding name xxxx.mitab.ddmmyyyy.txt.
+
+In some cases, other objects may belong to other taxons if a virus-host interaction is being represented or if a protein from another organism has been used to model a protein in the specified organism.
+
+Taxonomy identifiers are provided in the data sets allowing these exceptions to be identified. The taxonomy identifiers listed are derived from the source protein sequence record. In some cases, this taxonomy identifier will be a child of the taxon listed in the file's title; for example, Escherichia coli K12 (taxonomy identifier 83333) will appear in the Escherichia coli (taxonomy identifier 562) file.
+
+A description of the NCBI taxon identifiers is available at the following location:
+
+http://www.ncbi.nlm.nih.gov/sites/entrez?db=taxonomy
+
+The above data taxon division scheme leads to duplications; for instance, an interaction present in the mouse index could also appear in the human index if the interaction record lists protein sequence records from both human and mouse. The All.mitab.mmddyyyy file is a complete and non-redundant listing.
+
+The data format and divisions provided in this initial release were chosen in the hopes that they would be immediately useful to the largest possible set of users. Other formats and divisions are possible and we welcome your input on future releases.
+
+
+Changes from last version
+This public distribution includes data consolidated using the iRefIndex method for BIND, BioGRID, CORUM, DIP, IntAct, HPRD, MATRIXDB, MPACT, MPPI and MPIDB. MINT is now included in IntAct.
+
+New data sources are: INTCOMPLEXES (from IntAct), I2D_IMEX, REACTOME, VIRUSHOST, UNIPROTPP, HPIDB, MOLCON, BHF_UCL, MBINFO and QUICKGO.
+
+All of these resources have been integrated from freely available sources. See the sources links below for details.
+Integer identifiers for interactors and interactions are applicable to release 13. These integer identifiers include irogida, irogidb, irigid, icrogida, icrogidb and icrigid.
+
+Known Issues
+Interactions involving small molecules are missing
+iRefIndex indexes only those interaction records where ALL of the interactors are proteins. This means that records involving small molecules and proteins will not be indexed. The number of such records is growing mostly due to curation efforts of IntAct and Reactome.
+
+IMEX identifiers
+IMEx identifiers should be present in column 52 but are missing.
+
+PSI-MITAB2.7
+A extension to PSI-MITAB 2.6 has been recently introduced. We have no plan to migrate to the new 2.7 standard in the foreseeable future. Many of the columns new to 2.7 are already in our 2.6 version as additional columns. See columns 37 -
+
+
+Understanding the iRefIndex MITAB format
+iRefIndex is distributed in PSI-MITAB format. Version 2.5 of the format was originally described in PMID 17925023 (full text). This present file describes the columns defined by version 2.6 of the PSI-MITAB format plus columns added by iRefIndex.
+
+Since the PSI-MITAB format allows for only two interactors to be described on each line, it is best suited for describing binary interaction data (the original experiment, say yeast two hybrid, gives a binary readout). However, other source PSI-MI XML source records will describe interactions involving only one interactor type (dimers or multimers) or they will contain associative (also known as "n-ary") interaction data from, for example, immunoprecipitation experiments where the exact interactions between any pair of interactors are unknown. These cases are problematic for the PSI-MITAB format. This document describes exactly how we use the MITAB format to describe these alternate (non-binary) interaction types.
+
+What each line represents
+Each line or row in the MITAB file represents a single interaction record from one primary data source describing an interaction involving the exact same set of proteins (as defined by their primary sequence and taxonomy identifiers).
+
+NoteImportant	Each line in this file represents a single source database record that supports either:
+an interaction between two proteins (binary interaction) or
+the membership of a protein in some complex (complex membership) or
+an interaction that involves only one protein type (multimer or self-interaction).
+
+Each row in this table has a natural key pointing to an original interaction record in some source database that is listed under column 14 (interactionIdentifier). For example:
+
+intact:EBI-761694
+NoteNote	
+Prior to release 7.0, each line represented a group of interaction records involving the exact same set of proteins (as defined by their primary sequence and taxonomy identifiers). This collapsed or non-redundant format did not allow us to easily describe meta-data associated with each source record. Therefore, we have moved to this expanded or redundant version. Users can still collapse multiple rows that all provide evidence for an interaction between the same set of proteins using the keys provided (for example, RIGIDs).
+
+Rows in this table that all provide evidence for an interaction between the same set of proteins can be identified using the RIGID key (redundant interaction group identifier). The RIGID is a 27 character key that is derived from the ROGIDs of the interactors involved in the interaction record. The ROGID is a SHA-1 digest of the protein interactor's primary amino acid sequence concatenated with the NCBI taxonomy identifier (see the paper for details).
+
+NoteNote	
+The RIGID key is now listed (by itself) in column 35 (Checksum_Interaction) as part of the new extended PSI-MITAB format. This is a universal key that can be generated by each and every interaction database and may be included in MITAB2.6 distributions from other source databases. The intention of this key is to aid third party integration of data collected from multiple databases (for example, from PSICQUIC web services).
+
+Representation of interactions
+Binary interaction data
+This is the most common data type.
+
+For binary interaction data, column 53 (edgetype) will contain an X. Interactors A and B will list the two proteins for which interaction evidence is provided in the row. User's should pay close attention to columns 12 (interactionType) and 7 (Method) when deciding what binary data they wish to accept as evidence of a direct physical interaction.
+
+Complexes (a.k.a. n-ary data)
+Certain experimental methods (like immunoprecipitations) provide evidence that a list of 3 or more proteins are associated but cannot provide evidence for a direct interaction between any given pair of proteins in that list.
+
+In these cases, interactor A (column 1) is used as a placeholder to represent the complex or list of proteins while interactor B is used to list one of the members of the list: therefore, the entire n-ary interaction record is described using one row for each interactor. Each of these rows will have the same interactor A. This method of representation is referred to as a bi-partite model since there are two kinds of nodes corresponding to complexes and proteins.
+
+These interactions are marked by a C in column 53 (edgetype). The term "bipartite" will also appear in column 16 (expansion).
+
+As an example, let’s say that a source interaction record contained interactors A, B and C found by affinity purification and mass-spec where a tagged version of protein A was used as the bait protein to perform the immunoprecipitation.
+
+Then we would represent the complex in the MITAB file using three lines:
+
+X-A
+X-B
+X-C
+All three entries would have the same string in column 1 (the RIGID for the complex; e.g. complex:H3nSpFH1uZiQR8EiltQftlx82yI). All three entries would have a C in column 53 (edgetype) and "biparite" in column 16.
+
+Other databases take an interaction record with multiple interactors (n-ary data) and make a list of binary interactions (based on the spoke or matrix model) and then list these binary interactions in the MITAB. For the example above, using a spoke model to transform the data into a set of binary interactions, these data would be represented using two lines in the MITAB file:
+
+A-B
+A-C
+Here A is chosen as the "hub" of the spoke model since it was the "bait" protein. For experimental systems that do not have "baits" and "preys" (such as X-ray crystallography), an arbitrary protein might be chosen as the bait.
+
+Alternatively, a matrix model might be used to transform the n-ary data into a list of binary interactions. Here all pairwise combinations of interactors in the original n-ary data are represented as binary interactions. So, in the above example, the immunoprecipitated complex would be represented using three lines of the MITAB file:
+
+A-B
+B-C
+A-C
+All three methods for representing n-ary data in a MITAB file (bi-partite, spoke, and matrix) are different representations of the same data. The model type that is chosen to describe n-ary data is listed in column 16 (expansion) of the MITAB2.6 format.
+
+We have chosen to use the bi-partite method of representation so that it is impossible to mistake spoke or matrix binary entries for true binary entries; the identifiers used for complexes will, of course, not appear in a protein database and any programme that tries to treat complex identifiers as though they were protein identifiers will fail. The method allows you to reconstruct the members of the original interaction record that describes a complex of proteins (say from an affinity purification experiment). From there, you can choose to make a spoke or matrix model by yourself if you want.
+
+Users are advised that other databases may use spoke and matrix model representations of complexes in the MITAB format. If they adhere to the MITAB2.6 (or later) format, they will list their complex representation method in column 16.
+
+Intramolecular interactions and multimers
+These row types form a minority of the data and are rare in comparison to the above types.
+
+Sometimes source interaction records in PSI-MI format only list one interactor. These are cases where either
+
+an intra-molecular interaction is being represented or
+a multimer (3 or more) of some protein is being represented.
+These records are difficult to represent in the PSI-MITAB format because PSI-MITAB requires that each row (interaction) list two interactors. We are representing these interaction records using the following format to reflect the original format provided as closely as possible.
+
+Interactions involving only one interactor. The uidA and uidB would be the same and the edge type would be 'Y' (column number 53 (edgetype)). Therefore, when ever there is an edge type 'Y' this means that this interaction involves only one protein (although the interaction is given as between two interactors), and thus column number 54 (numParticipants) would always be 1. For example:
+{A - A, edge type 'Y', numParticipants=1}
+When the interaction is described as involving two interactors but both of them refer to the same protein. This would be represented as a normal binary interaction and would have the edge type = 'X' (column number 53 (edgetype)), and thus column number 54 (numParticipants) would always be 2. For example:
+{A - A, edge type 'X', numParticipants=2}
+When the interaction is described as involving more than 2 interactors and all those interactors are referring to the same protein, a bi-partite representation will be used. The edge type would be 'C' (column number 53 (edgetype)). For example, with regard to complexes (a.k.a. n-ary data):
+{C - A, edge type 'C', numParticipants=3
+ C - A, edge type 'C', numParticipants=3
+ C - A, edge type 'C', numParticipants=3}
+We draw extra attention to the fact that the RIGID (column number 35 (Checksum_Interaction)) for these interactions will be the SHA-1 digest of the ROGIDs for each of the distinct subunit types (see columns 33 (Checksum_A) and 34 (Checksum_B)). Thus interactions involving 1, 2 or more subunits of the same protein would all have the same RIGID.
+
+Keys for grouping together redundant interactors and interactions
+A number of keys are provided in this file to help users group together rows that all provide evidence for some kind of interaction between the same set (or a related set) of proteins. See columns 33-35 (Checksum_A, Checksum_B and Checksum_Interaction) and 43-51 (integer identifier and canonical data columns).
+
+The process of creating keys that group proteins and interactions into canonical groups was described after the original paper in the Canonicalization document.
+
+Provenance data
+Provenance data (where we retrieved source records from and how we mapped interactors and interactions to ROGIDs) is described in columns 37-42 (original and final references plus mapping scores).
+
+License
+Data released on this public ftp site are released under the Creative Commons Attribution License http://creativecommons.org/licenses/by/2.5/. This means that you are free to use, modify and redistribute these data for personal or commercial use so long as you provide appropriate credit. See next section.
+
+
+Copyright © 2008-2018 Ian Donaldson
+
+Citation
+Credit should include citing the iRefIndex paper (PMID 18823568) and any of the source databases upon which this resource is based. See iRefIndex_Citations for appropriate citations.
+
+Disclaimer
+Data is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Description of PSI-MITAB2.6 file
+Each line in this file represents a single source database record that supports either:
+
+an interaction between two proteins (binary interaction) or
+the membership of a protein in some complex (complex membership) or
+an interaction that involves only one protein type (multimer or self-interaction).
+Column number: 1 (uidA)
+Column type:	String
+Description:	Unique identifier for interactor A.
+Example:	
+uniprotkb:P23367
+Notes
+
+This column contains an identifier, taken from a major database, for a protein representing the interactor A. A UniProt or a RefSeq accession is provided (in that order of preference) wherever possible. See column 3 for a list of prefixes that may be employed in this column in addition to the following:
+
+complex
+If interactor A is being used to represent a complex, then the rogid for the complex will be listed here, such as the following:
+complex:xBr9cTXgzPLNxsaKiYyHcoEm/DM
+Understanding the iRefIndex MITAB format for an explanation.
+
+In rare cases, a rogid may appear here if a protein interactor has a sequence but no known, valid database:accession pair.
+
+Interactions that belong to the same canonical group (roughly this means that they map to the same set of Entrez GeneIDs - see above) will not necessarily have the same identifiers in columns 1 and 2. If you want to ensure that interactions that belong to the same canonical group are mapped to the same identifiers, you should use the canonical identifiers for the proteins and their mappings protein database accessions and Entrez GeneIDs in the Mappings file - see above.
+
+Column number: 2 (uidB)
+Column type:	String
+Description:	Unique identifier interactor B.
+Example:	
+uniprotkb:P06722
+Notes
+
+See notes for column 1.
+
+Column number: 3 (altA)
+Column type:	Pipe-delimited set of strings
+Description:	Alternative identifiers for interactor A
+Example:	
+uniprotkb:P23367|refseq:NP_418591|entrezgene/locuslink:948691|rogid:hhZYhMtr5JC1lGIKtR1wxHAd3JY83333|irogid:12345
+Notes
+
+All database:accession pairs listed in Column 3 point to protein records that describe the exact same sequence from the same taxon.
+
+Each pipe-delimited entry is a database_name:accession pair delimited by a colon. Database names are taken from the MI controlled vocabulary at the following location:
+
+http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI
+
+Database references listed in this column may include the following:
+
+uniprotkb
+The accessions this protein is known by in UniProt (http://www.uniprot.org/). More information regarding this protein can be retrieved using this accession from UniProt. See the AC line in the flat file. http://au.expasy.org/sprot/userman.html#AC_line.
+refseq
+If a protein accession exists in the RefSeq data base (http://www.ncbi.nlm.nih.gov/RefSeq/) that reference is indicated here. More information about this protein can be obtained from RefSeq using this accession.
+entrezgene/locuslink
+NCBI gene Identifiers for the gene encoding this protein. See ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2refseq column GeneID given protein's accession.version
+other
+If none of the three identifier types are available then other databasename:accession pairs will be listed. These database names may not follow the MI controlled vocabulary.
+Example:
+
+emb:CAA44868.1|gb:AAA23715.1|gb:AAB02995.1|emb:CAA56736.1|uniprot:P24991
+rogid
+Column 33 repeated here for convenience.
+irogid
+Column 43 repeated here for convenience.
+NoteNote	
+The rogid of a complex or a n-ary interaction is the rigid of that interaction. However, the irogid of the complex is not the irigid. The irogid for the complex is an integer and it is non-overlapping with any protein irogids
+
+Column number: 4 (altB)
+Column type:	Pipe-delimited set of strings
+Description:	Alternative identifiers for interactor B
+Example:	
+uniprotkb:P06722|refseq:NP_417308|entrezgene/locuslink:947299
+Notes
+
+See notes for column 3. (Columns 34 and 44 are related to this column.)
+
+Column number: 5 (aliasA)
+Column type:	Pipe-delimited set of strings
+Description:	Aliases for interactor A
+Example:	
+uniprotkb:MUTL_ECOLI|entrezgene/locuslink:mutL|crogid:hhZYhMtr5JC1lGIKtR1wxHAd3JY83333|icrogid:12345
+Notes
+
+Each pipe-delimited entry is a database name:alias pair delimited by a colon. Database names are taken from the PSI-MI controlled vocabulary at the following location:
+
+http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI
+
+Database names and sources listed in this column may include the following:
+
+uniprotkb:entry name
+the entry name given by UniProt. See the description for "Entry name" in the section of http://au.expasy.org/sprot/userman.html#ID_line concerning the "ID (IDentification)" line of the flat file
+entrezgene/locuslink:symbol
+the NCBI gene symbol for the gene encoding this protein. See the section in ftp://ftp.ncbi.nlm.nih.gov/gene/README for gene_info, specifically details for the Symbol column
+crogid
+Column 46 repeated here for convenience.
+icrogid
+Column 49 repeated here for convenience.
+other db:accession pairs
+Other db:accession pairs may be added (after icrogid) that all belong to the same canonical group. These are purely meant to facilitate look-up by PSICQUIC and other services - these sequences are related (but not identical) with interactor A sequence.
+NA
+NA may be listed here if aliases are not available
+Column number: 6 (aliasB)
+Column type:	Pipe-delimited set of strings
+Description:	Aliases for interactor B
+Example:	
+uniprotkb:MUTH_ECOLI|entrezgene/locuslink:mutH
+Notes
+
+See notes for column 5. (Columns 47 and 50 are related to this column.)
+
+Column number: 7 (Method)
+Column type:	String
+Description:	Interaction detection method
+Example:	
+MI:0039(2h fragment pooling)
+Notes
+
+NoteNote	
+Only a single method will appear in this column. Previously, multiple methods appeared. There may be rare exceptions to this if a source record has listed more than one method.
+
+Both the controlled vocabulary term identifier for the method (e.g. MI:0399) and the controlled vocabulary term short label in brackets (e.g. 2h fragment pooling) will appear in this column. See http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI to look up controlled vocabulary term identifiers.
+
+The interaction detection method is from the original record. Path for PSI-MI 2.5:
+
+entrySet/entry/experimentList/experimentDescription/interactionDetectionMethod/names/shortLabel/
+
+NoteNote	
+If a controlled vocabulary term identifier was not provided by the source database then an attempt was made to use the supplied short label to find the correct term identifier. You can see ou mappings on this wiki at "Mapping_of_terms_to_MI_term_ids_-_iRefIndex_8.0". If a term identifier could not be found, then MI:0000 will appear before the shortLabels.
+
+NA or -1 may appear in place of a recognised shortLabel.
+
+For example:
+
+MI:0000(-1)
+MI:0000(NA)
+Column number: 8 (author)
+Column type:	Pipe-delimited set of strings
+Description:	
+Example:	
+hall-1999-1|hall-1999-2|mansour-2001-1|mansour-2001-2|hall-1999
+Notes
+
+According to MITAB2.6 format this column should contain a pipe-delimited list of author surnames in which the interaction has been shown.
+
+NoteNote	
+This column will usually include only one author name reference. However, some experimental evidences have secondary references which could be included here. This filed also includes references which are not author names as in the following examples:
+
+HPRD Text Mining Confirmation
+Column number: 9 (pmids)
+Column type:	Pipe-delimited set of strings
+Description:	PubMed Identifiers
+Example:	
+pubmed:9880500|pubmed:11585365
+Notes
+
+This is a non-redundant list of PubMed identifiers pointing to literature that supports the interaction. According to MITAB2.6 format, this column should contain a pipe-delimited set of databaseName:identifier pairs such as pubmed:12345. The source database name is always pubmed.
+
+NoteNote	
+This column will usually include only one PubMed reference that describes where the experimental evidence is found. In some cases, secondary references are provided by the source database and will be included here.
+
+
+The special value - may appear in place of the identifiers.
+
+Column number: 10 (taxa)
+Column type:	String
+Description:	Taxonomy identifier for canonical interactor A
+Example:	
+taxid:83333(Escherichia coli K-12)
+Notes
+
+The NCBI taxonomy identifier listed here is that of the sequence record for the interactor and may be corrected from what was provided by the source database. See the methods section of the iRefIndex paper for more details. See also the NCBI taxonomy database at the following location:
+
+http://www.ncbi.nlm.nih.gov/sites/entrez?db=taxonomy
+
+According to the MITAB2.6 format, this column should contain a pipe delimited set of databaseName:identifier pairs such as taxid:12345. The source database name has been listed as taxid since it is always NCBI's taxonomy database. The value in this column will be NA if the interactor is a complex.
+
+Column number: 11 (taxb)
+Column type:	String
+Description:	Taxonomy identifier for canonical interactor B
+Example:	
+taxid:83333(Escherichia coli K-12)
+Notes
+
+See notes for column 10.
+
+Column number: 12 (interactionType)
+Column type:	String
+Description:	Interaction Type from controlled vocabulary or short label
+Example:	
+MI:0218(physical interaction)
+Notes
+
+NoteNote	
+Only one interaction type will be present in each line of the file.
+
+The interaction type is taken from the PSI-MI controlled vocabulary and represented as...
+
+database:identifier(interaction type)
+...(when available in the interaction record) or Path for PSI-MI 2.5:
+
+entrySet/entry/interactionList/interaction/interactionType/names/shortLabel
+See http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI to lookup controlled vocabulary term identifiers for interaction types.
+
+NoteNote	
+If the MI controlled vocabulary identifier was not provided by the source database, but a text description was provided, then an attempt was made to map the text to the correct controlled vocabulary term identifier. See "Mapping_of_terms_to_MI_term_ids_-_iRefIndex_8.0" on this wiki for a list of our mappings. If this was not possible then MI:0000 is listed.
+
+NA may be listed here if the interaction type is not available (meaning that we could not find the interaction type in the record provided by the source database).
+
+Column number: 13 (sourcedb)
+Column type:	String
+Description:	Source database for this interaction record
+Example:	
+MI:0469(intact)
+Notes
+
+Taken from the PSI-MI controlled vocabulary and represented as...
+
+database:identifier(source name)
+See http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI to lookup controlled vocabulary term identifiers for database sources.
+
+NoteNote	
+Only one source database will be listed in each row.
+
+Column number: 14 (interactionIdentifier)
+Column type:	String
+Description:	source interaction-database and accession
+Example:	
+intact:EBI-761694|rigid:3ERiFkUFsm7ZUHIRJTx8ZlHILRA|irigid:1234|edgetype:X
+Notes
+
+Each reference is presented as a database name:identifier pair.
+
+NoteNote	
+The source database is listed first. Additional information is pipe-delimited and presented here for the convenience of PSICQUIC web-service users (these services presently truncate this file at column 15 as they only support MITAB2.5). See columns 35,45,53.
+
+The source database names that appear in this column are taken from the PSI-MI controlled vocabulary at the following location (where possible):
+
+http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI
+
+If an interaction record identifier is not provided by the source database, this entry will appear as database-name:- with the identifier region replaced with a dash (-).
+
+Column number: 15 (confidence)
+Column type:	Pipe-delimited set of strings
+Description:	Confidence scores
+Example:	
+lpr:1|hpr:12|np:1
+Notes
+
+Each reference is presented as a scoreName:score pair. Three confidence scores are provided: lpr, hpr and np.
+
+PubMed Identifiers (PMIDs) point to literature references that support an interaction. A PMID may be used to support more than one interaction.
+
+The lpr score (lowest PMID re-use) is the lowest number of distinct interactions (RIGIDs: see column 35) that any one PMID (supporting the interaction in this row) is used to support. A value of one indicates that at least one of the PMIDs supporting this interaction has never been used to support any other interaction. This likely indicates that only one interaction was described by that reference and that the present interaction is not derived from high throughput methods.
+
+The hpr score (highest PMID re-use) is the highest number of interactions (RIGIDs: see column 35) that any one PMID (supporting the interaction in this row) is used to support. A high value (e.g. greater than 50) indicates that one PMID describes at least 50 other interactions and it is more likely that high-throughput methods were used.
+
+The np score (number PMIDs) is the total number of unique PMIDs used to support the interaction described in this row.
+
+- may appear in the score field, indicating the absence of a score value.
+
+NoteNote	
+COLUMNS PAST THIS POINT (16 - 31) ARE PART OF THE PSI-MITAB 2.6 FORMAT
+
+Column number: 16 (expansion)
+Column type:	String
+Description:	Model used to convert n-ary data into binary data for purpose of export in MITAB file
+Example:	
+bipartite
+Notes
+
+For iRefIndex, this column will always contain either bipartite or none.
+
+Other databases may use either spoke or matrix or none in this column.
+
+See Understanding the iRefIndex MITAB format for an explanation.
+
+Column number: 17 (biological_role_A)
+Column type:	String
+Description:	Biological role of interactor A
+Example:	
+MI:0501(enzyme)
+Notes
+
+When provided by the source database, this includes single entries such as MI:0501(enzyme), MI:0502(enzyme target), MI:0580(electron acceptor), or MI:0499(unspecified role).
+
+See http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI to browse possible values for biological role.
+
+For complexes and when no role is explicitly specified this column will contain the following:
+
+MI:0000(unspecified)
+Column number: 18 (biological_role_B)
+Column type:	String
+Description:	Biological role of interactor B
+Example:	
+MI:0501(enzyme)
+Notes
+
+See notes for column 17.
+
+Column number: 19 (experimental_role_A)
+Column type:	String
+Description:	Indicates the experimental role of the interactor (such as bait or prey).
+Example:	
+MI:0496(bait)
+Example:	
+MI:0498(prey)
+Notes
+
+This column indicates the experimental role (if any was provided by the source database) that was played by interactor A.
+
+See http://www.ebi.ac.uk/ontology-lookup/browse.do?ontName=MI to see definitions of bait and prey. as well as browse other possible values of experimental role that may appear in this column for other databases.
+
+For complexes and when no role is explicitly specified this column will contain the following:
+
+MI:0000(unspecified)
+Column number: 20 (experimental_role_B)
+Column type:	String
+Description:	Indicates the experimental role of the interactor (such as bait or prey).
+Example:	
+MI:0496(bait)
+Example:	
+MI:0498(prey)
+Notes
+
+This column indicates the experimental role (if any) that was played by interactor B.
+
+See notes above for column 19.
+
+Column number: 21 (interactor_type_A)
+Column type:	String
+Description:	describes the type of molecule that A is
+Example:	
+MI:0326(protein)
+Notes
+
+For iRefIndex, this will always be one of...
+
+MI:0326(protein)
+MI:0315(protein complex)
+Column number: 22 (interactor_type_B)
+Column type:	String
+Description:	describes the type of molecule that B is
+Example:	
+MI:0326(protein)
+Notes
+
+See column 21.
+
+Column number: 23 (xrefs_A)
+Column type:	Pipe-delimited set of strings
+Description:	xrefs for molecule A
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+This column may be used by other databases to list cross-references to annotation information for molecule A. For example, Gene Ontology identifiers or OMIM identifiers.
+
+omim:152430(longevity)|go:"GO:0016233"(telomere capping)
+Column number: 24 (xrefs_B)
+Column type:	Pipe-delimited set of strings
+Description:	xrefs for molecule B
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+See notes to column 23.
+
+Column number: 25 (xrefs_Interaction)
+Column type:	Pipe-delimited set of strings
+Description:	xrefs for the interaction
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+This column may be used by other databases to list cross-references to annotation information for the interaction. For example, Gene Ontology identifiers or OMIM identifiers.
+
+go:"GO:0048786"(presynaptic active zone)
+Column number: 26 (Annotations_A)
+Column type:	Pipe-delimited set of strings
+Description:	Annotations for molecule A
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+This column may be used by other databases to list free-text annotation information for the interaction. For example:
+
+This protein has an apparent MW of 25 kDa|This protein binds 7 zinc molecules
+Some databases may use dataset:* or data-processing:* (where * is non-controlled free-text) in this column.
+
+Column number: 27 (Annotations_B)
+Column type:	String
+Description:	Annotations for molecule B
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+See notes to column 26.
+
+Column number: 28 (Annotations_Interaction)
+Column type:	Pipe-delimited set of strings
+Description:	Annotations for interaction
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+This column may be used by other databases to list free-text annotation information for the interaction. For example:
+
+figure-legend:F1A|prediction score:432|comment:prediction based on phage display consensus|author-confidence:8|comment:AD-ORFeome library used in the experiment.
+The prefixes used before the : (like "comment") are database specific and not controlled.
+
+Some databases may use dataset:* or data-processing:* (where * is non-controlled free-text) in this column.
+
+Column number: 29 (Host_organism_taxid)
+Column type:	String
+Description:	The taxonomy identifier of the host organism where the interaction was experimentally demonstrated
+Example:	
+taxid:10090(Mus musculus)
+Notes
+
+This may differ from the taxonomy identifier associated with the interactors. Other possible entries are:
+
+taxid:-1(in vitro)
+taxid:-4(in vivo)
+A dash (-) will be used when no information about the host organism is available.
+
+taxid:32644(unidentified) will be used when the source specifies the host organism taxonomy identifier as 32644.
+
+Column number: 30 (parameters_Interaction)
+Column type:	String
+Description:	Parameters for the interaction
+Example:	
+-
+Notes
+
+This is not used by iRefIndex. A dash (-) will always appear in this column.
+
+Internal note : use of this column is not well-defined or characterized.
+
+Column number: 31 (Creation_date)
+Column type:	String (yyyy/mm/dd)
+Description:	When was the entry created.
+Example:	
+2010/05/06
+Notes
+
+This will be the release date of iRefIndex for all entries in this file.
+
+This date will not match the date for the corresponding record in the source database.
+
+Column number: 32 (Update_date)
+Column type:	String (yyyy/mm/dd)
+Description:	When was this record last updated?
+Example:	
+2010/05/06
+Notes
+
+This will be the release date of iRefIndex for all entries in this file.
+
+This date will not match the date for the corresponding record in the source database.
+
+Column number: 33 (Checksum_A)
+Column type:	String
+Description:	Hash key for interactor A.
+Example:	
+rogid:hhZYhMtr5JC1lGIKtR1wxHAd3JY83333
+Notes
+
+NoteNote	
+This column contains a universal key for interactor A .
+
+This column may be used to identify other interactors in this file that have the exact same amino acid sequence and taxon id.
+
+This universal key listed here is the ROGID (redundant object group identifier) described in the original iRefIndex paper, PMID 18823568.
+
+Column 3 lists database names and accessions that all have this same key.
+
+The ROGID for proteins, consists of the base-64 version of the SHA-1 key for the protein sequence concatenated with the taxonomy identifier for the protein. For complex nodes, the ROGID is calculated as the SHA-1 digest of the ROGIDs of all the protein participants (after first ordering them by ASCII-based lexicographical sorting in ascending order and concatenating them) See the iRefIndex paper for details. The SHA-1 key is always 27 characters long. So the ROGID will be composed of 27 characters concatenated with a taxonomy identifier for proteins.
+
+Column number: 34 (Checksum_B)
+Column type:	String
+Description:	Hash key for interactor B.
+Example:	
+rogid:AhmYiMtz8lR12Gixt91txbAd3JY83333
+Notes
+
+See notes for column 33.
+
+Column number: 35 (Checksum_Interaction)
+Column type:	String
+Description:	Hash key for this interaction
+Example:	
+rigid:3ERiFkUFsm7ZUHIRJTx8ZlHILRA
+Notes
+
+This column may be used to identify other rows (interaction records) in this file that describe interactions between the same set of proteins from the same taxon id.
+
+This universal key listed here is the RIGID (redundant interaction group identifier) described in the original iRefIndex paper, PMID 18823568.
+
+The RIGID consists of the ROG identifiers for each of the protein participants (see notes above) ordered by ASCII-based lexicographic sorting in ascending order, concatenated and then digested with the SHA-1 algorithm. See the iRefIndex paper for details. This identifier points to a set of redundant protein-protein interactions that involve the same set of proteins with the exact same primary sequences.
+
+Column number: 36 (Negative)
+Column type:	Boolean (true or false)
+Description:	Does the interaction record provide evidence that some interaction does NOT occur.
+Example:	
+false
+Notes
+
+This value will be false for all lines in this file since iRefIndex does not include "negative" interactions from any of the source databases.
+
+NoteImportant	
+COLUMNS PAST THIS POINT (37 -) ARE NOT DEFINED BY THE PSI-MITAB2.6 STANDARD. THESE COLUMNS ARE SPECIFIC TO THIS IREFINDEX RELEASE AND MAY CHANGE FROM ONE RELEASE TO ANOTHER
+
+Column number: 37 (OriginalReferenceA)
+Column type:	String
+Description:	Database name and reference used in the original interaction record to describe interactor A
+Example:	
+uniprotkb:P23367
+Notes
+
+This is the protein reference that was found in the original interaction record to describe interactor A. It is a colon-delimited pair of database name and accession. It may be either the primary or secondary reference for the protein provided by the source database.
+
+For complexes this will be the ROGID of the complex.
+
+Column number: 38 (OriginalReferenceB)
+Column type:	String
+Description:	Database name and reference used in the original interaction record to describe interactor B
+Example:	
+uniprotkb:P23367
+Notes
+
+See notes for column 37.
+
+Column number: 39 (FinalReferenceA)
+Column type:	String
+Description:	Database name and reference used by iRefIndex to describe interactor A
+Example:	
+uniprotkb:P23367
+Notes
+
+Column 37 (OriginalReferenceA) was used by the iRefIndex consolidation process to arrive at this FinalReferenceA. This database name and accession pair will usually be the same as that listed in column 37, unless the provided reference was malformed, had to be updated or was ambiguous.
+
+Examples:
+
+The original reference is malformed. For example: RefSeq:NP 036076 instead of RefSeq:NP_036076.
+The original reference is incomplete. For example: PDB:1KQ1| (missing chain information).
+The original reference is deprecated. For example: UniProt:Q9H233 (the value of FinalReferenceA will be the latest available accession in this case).
+The original reference is ambiguous. For example: a gene identifier is provided (the value of FinalReferenceA will be a protein product selected in a systematic way in this case).
+Column number: 40 (FinalReferenceB)
+Column type:	String
+Description:	Database name and reference used by iRefIndex to describe interactor B
+Example:	
+uniprotkb:P23367
+Notes
+
+See notes for column 39.
+
+Column number: 41 (MappingScoreA)
+Column type:	String
+Description:	String describing operations performed by iRefIndex procedure during mapping from original protein reference (columns 37) to the final protein reference (columns 39).
+Example:	
+PTUO+
+Notes
+
+This column contains a description of mapping operations as a condensed string of letters. See the original iRefIndex paper, PMID 18823568.
+
+For complexes, this column will contain
+-
+.
+Column number: 42 (MappingScoreB)
+Column type:	String
+Description:	String describing operations performed by iRefIndex procedure during mapping from original protein reference (column 38) to the final protein reference (column 40).
+Example:	
+SU
+Notes
+
+See notes for column 41.
+
+Column number: 43 (irogida)
+Column type:	String
+Description:	Integer ROGID for interactor A.
+Example:	
+2345
+Notes
+
+This is an internal, integer-equivalent of the alphanumeric identifier in column 33 for interactor A. All interactors with the same sequence and taxon origin will have the same irogid.
+
+The identifier listed here can only be used to refer to another interactor in the same release.
+
+Column number: 44 (irogidb)
+Column type:	String
+Description:	Integer ROGID for interactor B.
+Example:	
+456543
+Notes
+
+See notes for column 43.
+
+Column number: 45 (irigid)
+Column type:	String
+Description:	Integer RIGID for this interaction.
+Example:	
+1234
+Notes
+
+This is an internal, integer-equivalent of the alphanumeric identifier in column 35 for this interaction. All interactions involving the same interactors (same sequence and same taxon) will have the same irigid.
+
+The identifier listed here can only be used to refer to another interaction in the same release.
+
+Column number: 46 (crogida)
+Column type:	String
+Description:	Alphanumeric ROGID for the canonical group to which interactor A belongs.
+Example:	
+hhZYhMtr5JC1lGIKtR1wxHAd3JY83333
+Notes
+
+This column may be used to identify other interactors in this file that all belong to the same canonical group.
+
+Members of a canonical group may include splice isoform products from the same or related genes. Members of a canonical group do not all necessarily have the same sequence (although they all belong to the same taxon). One member of the canonical group is chosen to represent the entire group. The identifier for that canonical representative is listed in this column.
+
+See Canonicalization for further details.
+
+Column number: 47 (crogidb)
+Column type:	String
+Description:	Alphanumeric ROGID for the canonical group to which interactor B belongs.
+Example:	
+AhmYiMtz8lR12Gixt91txbAd3JY83333
+Notes
+
+See notes for column 46.
+
+Column number: 48 (crigid)
+Column type:	String
+Description:	Alphanumeric RIGID for the canonical group to which this interaction belongs.
+Example:	
+3ERiFkUFsm7ZUHIRJTx8ZlHILRA
+Notes
+
+This is the RIGID for this interaction calculated using the canonical ROGIDs (preceding two columns).
+
+This column may be used to identify other interactions in this file that all belong to the same canonical group.
+
+
+Column number: 49 (icrogida)
+Column type:	String
+Description:	Integer ROGID for the canonical group to which interactor A belongs.
+Example:	
+2345
+Notes
+
+This is an internal, integer-equivalent of the alphanumeric canonical ROGID in column 46 for interactor A. Interactors with the same icrogid may have different sequences but are related; e.g. different splice isoforms of the same gene.
+
+The identifier listed here can only be used to refer to another interactor in the same release.
+
+Column number: 50 (icrogidb)
+Column type:	String
+Description:	Integer ROGID for the canonical group to which interactor B belongs.
+Example:	
+456543
+Notes
+
+See notes for column 49.
+
+Column number: 51 (icrigid)
+Column type:	String
+Description:	Integer RIGID for the canonical group to which this interaction belongs.
+Example:	
+12345
+Notes
+
+This is an internal, integer-equivalent of the canonical RIGID. See column 48.
+
+This integer may be used to query the iRefWeb interface for the interaction record. For example:
+
+http://wodaklab.org/iRefWeb/interaction/show/13653
+
+...where 13653 is the integer, canonical RIGID.
+
+This identifier serves to group together evidence for interactions that involve the same set (or a related set) of proteins.
+
+The identifier listed here can only be used to refer to another interaction in the same release.
+
+Column number: 52 (imex_id)
+Column type:	String
+Description:	IMEx identifier if available
+Example:	
+imex:IM-12202-3
+Example:	
+-
+Notes
+
+When no information available a dash (-) will be used.
+
+Column number: 53 (edgetype)
+Column type:	Character
+Description:	Does the edge represent a binary interaction (X), member of complex (C) data, or a multimer (Y)?
+Example:	
+X
+Notes
+
+Edges can be labelled as either X, C or Y:
+
+X
+a binary interaction with two protein participants
+C
+denotes that this edge is a binary expansion of interaction record that had 3 or more interactors (so-called "complex" or "n-ary" data). The expansion type is described in column 16 (expansion). In the case of iRefIndex, the expansion is always "bipartite" meaning that Interactor A of this row represents the complex itself and Interactor B represents a protein that is a member of this group.
+See Understanding the iRefIndex MITAB format for further explanation.
+
+Y
+for dimers and polymers. In case of dimers and polymers when the number of subunits is not described in the original interaction record, the edge is labelled with a Y. Interactor A will be identical to the Interactor B. The graphical representation of this will appear as a single node connected to itself (loop). The actual number of self-interacting subunits may be 2 (dimer) or more (say 5 for a pentamer). Refer to the original interaction record for more details and see column 54.
+Column number: 54 (numParticipants)
+Column type:	Integer
+Description:	Number of participants in the interaction
+Example:	
+2
+Notes
+
+For edges labelled X (see column 53) this value will be two.
+For edges labelled C, this value will be equivalent to the number of protein interactors in the original n-ary interaction record.
+For interactions labelled Y, this value will either be the number of self-interacting subunits (if present in the original interaction record) or 1 where the exact number of subunits is unknown or unspecified.
+NoteImportant	
+The number of participants can be greater than the number of distinct proteins involved in an interaction because a single protein can participate more than once in an interaction. Such participation is enumerated and counted to produce the value in this column.
+
+Category: iRefIndex
+Powered by MediaWiki
+This page was last modified on 10 March 2018, at 09:03. This page has been accessed 3,329 times. Privacy policy About irefindex Disclaimers
