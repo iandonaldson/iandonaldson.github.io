@@ -2,7 +2,7 @@ title: ian donaldson
 description: bioinformatics and data analysis
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
 
 gems:
   - jekyll-mentions
