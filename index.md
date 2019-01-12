@@ -2,7 +2,7 @@
 
 ## Notes  
 
-* [Regression](https://github.com/iandonaldson/notes/tree/master/regression/)
+* [Regression](https://github.com/iandonaldson/notes/tree/master/regression/regression.html)
 
 ## Projects
 
