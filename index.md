@@ -1,5 +1,9 @@
 # Content
 
+## Notes  
+
+* [Regression](https://github.com/iandonaldson/notes/tree/master/regression/)
+
 ## Projects
 
 * [Practical machine learning project ](http://iandonaldson.github.io/practical-machine-learning-project/)
