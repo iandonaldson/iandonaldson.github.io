@@ -4,6 +4,7 @@
 
 * [Regression](https://iandonaldson.github.io/notes/regression/regression.html)
 * [Bash](https://iandonaldson.github.io/notes/codingInBashAwkSedUnixAndOsx_notesAndLearningResources.html)
+* [R](https://iandonaldson.github.io/notes/codingInR_notesAndLearningResources.html)
 
 ## Projects
 
