@@ -3,6 +3,7 @@
 ## Notes  
 
 * [Regression](https://iandonaldson.github.io/notes/regression/regression.html)
+* [Bash](https://iandonaldson.github.io/notes/codingInBashAwkSedUnixAndOsx_notesAndLearningResources.md)
 
 ## Projects
 
