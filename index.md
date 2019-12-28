@@ -44,9 +44,13 @@ MDSP grew at an explosive rate but unfortunately imploded before going public.  
 
 ### Postdoctoral work
 
-My post-doctoral work was a departure from my Ph.D. in molecular biology.  I had had enough of working in the cold-room.
+My post-doctoral work was a departure from my Ph.D. in molecular biology and was largely motivated as a means to escape the cold-room.
 
 PreBIND was my first program.  Written in C (including the web-page api) and making use of the NCBI toolkit, this program  collected co-occurrences of protein/gene mentions in pubmed abstracts and assessed the likelihood that they contained interaction data using a support vector machine.  The study was [one of the first to quantify the time savings of computer-assisted curation of biomedical literature](http://www.biomedcentral.com/1471-2105/4/11).
+
+### Ph.D.
+
+This [thesis](https://tspace.library.utoronto.ca/bitstream/1807/12499/1/NQ45748.pdf) now seems buried in the murky past but involved countless hours in a cold-room, a myriad tooth-picks and way too many agar plates.  Mostly forgettable but taught me the importance of never giving up and asking a good question (not necessarily in that order of importance).  Writing my thesis raised the question, "Why aren't all these genetic/physical interactions written down somewhere in a structured-data format that could be easily retreived...?".
 
 ## Shared Notes  
 
