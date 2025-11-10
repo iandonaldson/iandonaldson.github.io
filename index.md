@@ -1,5 +1,7 @@
-## About   
+# Donaldson Research
   
+## About   
+    
 [Ian Donaldson profile on GitHub](https://github.com/iandonaldson)   
 [Research Gate Profile](https://www.researchgate.net/profile/Ian_Donaldson2/)    
 [LinkedIn Profile](http://www.linkedin.com/pub/ian-donaldson/4/7b8/a86)   
@@ -110,6 +112,7 @@ J Biol Chem. 2000 May 5;275(18):13780-8.  [View article](http://www.jbc.org/cont
 
 
 Editing:  see the README for the project [iandonaldson.github.io] (https://github.com/iandonaldson/iandonaldson.github.io)
+
 
 
 
