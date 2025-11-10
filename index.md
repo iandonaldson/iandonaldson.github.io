@@ -6,7 +6,11 @@
 [Research Gate Profile](https://www.researchgate.net/profile/Ian_Donaldson2/)    
 [LinkedIn Profile](http://www.linkedin.com/pub/ian-donaldson/4/7b8/a86)   
 [ResearcherId Profile](http://www.researcherid.com/rid/A-2867-2009)  
-[ian@donaldsonresearch.com](mailto:ian@donaldsonresearch.com) 
+[ian@donaldsonresearch.com](mailto:ian@donaldsonresearch.com)  
+
+[![Email](https://img.shields.io/badge/Email-ian%40donaldsonresearch.com-0A84FF?logo=gmail&logoColor=white&style=flat-square)](mailto:ian@donaldsonresearch.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A84FF?logo=linkedin&logoColor=white&style=flat-square)](https://linkedin.com/in/donaldsonian)
+[![Google%20Scholar](https://img.shields.io/badge/Scholar-Publications-495057?logo=googlescholar&logoColor=white&style=flat-square)](http://scholar.google.com/citations?user=oKMlKscAAAAJ)
   
 ## Publications  
   
@@ -112,6 +116,7 @@ J Biol Chem. 2000 May 5;275(18):13780-8.  [View article](http://www.jbc.org/cont
 
 
 Editing:  see the README for the project [iandonaldson.github.io] (https://github.com/iandonaldson/iandonaldson.github.io)
+
 
 
 
