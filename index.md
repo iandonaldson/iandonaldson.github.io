@@ -1,6 +1,3 @@
-# Ian Donaldson
-  
-  
 ## About   
   
 [Ian Donaldson profile on GitHub](https://github.com/iandonaldson)   
@@ -9,12 +6,12 @@
 [ResearcherId Profile](http://www.researcherid.com/rid/A-2867-2009)  
 [ian@donaldsonresearch.com](mailto:ian@donaldsonresearch.com) 
   
-## Publications
-
+## Publications  
+  
 Citation metrics on [ResearcherID](http://www.researcherid.com/rid/A-2867-2009)
-
+   
 * = corresponding author(s)
-
+  
 Turinsky AL, Razick S, Turner B, Donaldson IM*, Wodak SJ*.  
 ***Navigating the global protein-protein interaction landscape using iRefWeb.***  
 Methods Mol Biol. 2014;1091:315-31. [View article](http://www.ncbi.nlm.nih.gov/pubmed/24203342).
@@ -107,14 +104,12 @@ Donaldson, I.M. and J.D. Friesen.*
 ***Zinc stoichiometry of yeast RNA polymerase II and characterization of mutations in the zinc-binding domain of the largest subunit.***  
 J Biol Chem. 2000 May 5;275(18):13780-8.  [View article](http://www.jbc.org/content/275/18/13780.full.pdf+html).
 
-## Shared Notes  
 
-* [Bash](https://iandonaldson.github.io/notes/codingInBashAwkSedUnixAndOsx_notesAndLearningResources.html)
-* [R](https://iandonaldson.github.io/notes/codingInR_notesAndLearningResources.html)
 
 
 
 
 Editing:  see the README for the project [iandonaldson.github.io] (https://github.com/iandonaldson/iandonaldson.github.io)
+
 
 
