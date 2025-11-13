@@ -9,6 +9,12 @@
 [Ian Donaldson profile on GitHub](https://github.com/iandonaldson)   
 [Research Gate Profile](https://www.researchgate.net/profile/Ian_Donaldson2/)    
 [ResearcherId Profile](http://www.researcherid.com/rid/A-2867-2009) 
+
+
+## Shared Notes  
+* [Bash](https://iandonaldson.github.io/notes/codingInBashAwkSedUnixAndOsx_notesAndLearningResources.html)  
+* [R](https://iandonaldson.github.io/notes/codingInR_notesAndLearningResources.html)  
+* [International Seq Projects](https://github.com/iandonaldson/notes/blob/master/internationalSeqProjects.md)  
   
 ## Publications  
   
@@ -114,6 +120,7 @@ J Biol Chem. 2000 May 5;275(18):13780-8.  [View article](http://www.jbc.org/cont
 
 
 Editing:  see the README for the project [iandonaldson.github.io] (https://github.com/iandonaldson/iandonaldson.github.io)
+
 
 
 
