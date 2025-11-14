@@ -14,7 +14,8 @@
 ## Shared Notes  
 * [Bash](https://iandonaldson.github.io/notes/codingInBashAwkSedUnixAndOsx_notesAndLearningResources.html)  
 * [R](https://iandonaldson.github.io/notes/codingInR_notesAndLearningResources.html)  
-* [International Seq Projects](https://iandonaldson.github.io/notes/internationalSeqProjects.html)  
+* [International Seq Projects](https://iandonaldson.github.io/notes/internationalSeqProjects.html)
+* [International Seq Projects](https://iandonaldson.github.io/notes/seqProjectsImpactOnCancerResearch.html)  
   
 ## Publications  
   
@@ -120,6 +121,7 @@ J Biol Chem. 2000 May 5;275(18):13780-8.  [View article](http://www.jbc.org/cont
 
 
 Editing:  see the README for the project [iandonaldson.github.io] (https://github.com/iandonaldson/iandonaldson.github.io)
+
 
 
 
